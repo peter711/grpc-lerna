@@ -17,6 +17,7 @@
   "dependencies": {
     "@grpc/grpc-js": "^1.10.6",
     "async": "^3.2.5",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "protos-types": "*"
   }
 }

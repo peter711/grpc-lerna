@@ -1,7 +1,7 @@
 import { credentials } from '@grpc/grpc-js';
 import dotenv from 'dotenv';
 
-import { RouteGuideClient } from '../../../protos-types/dist/route_guide_grpc_pb';
+import { RouteGuideClient } from 'protos-types/dist/route_guide_grpc_pb';
 
 dotenv.config();
 
