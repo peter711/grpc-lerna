@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
-import { credentials } from '@grpc/grpc-js';
 
-import { RouteGuideClient } from './protos/route_guide_grpc_pb.js';
-// import { Point } from './protos/route_guide_pb';
+import { RouteGuideClient } from './protos/Route_guideServiceClientPb';
+import * as Types from './protos/route_guide_pb';
 
 import './App.css';
 
-function callGRPCService() {
+async function callGRPCService() {
   const EnvoyURL = 'http://localhost:8000';
-  const client = new RouteGuideClient(EnvoyURL, credentials.createInsecure());
+  const client = new RouteGuideClient(EnvoyURL);
+  const request = new Types.Point();
+  await client.getFeature(request, {});
   // client.getFeature(
   //   new Point().setLatitude(409146138).setLongitude(-746188906),
   //   (err, feature) => {

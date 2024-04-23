@@ -1,4 +1,4 @@
-import { Point } from '../../../protos-types/dist/route_guide_pb';
+import { Point } from '../protos//route_guide_pb';
 import { COORD_FACTOR } from '../constants';
 import { client } from '../services';
 

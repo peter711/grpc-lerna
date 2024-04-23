@@ -16,7 +16,7 @@
 // limitations under the License.
 //
 'use strict';
-var grpc = require('@grpc/grpc-js');
+var grpc = require('grpc');
 var route_guide_pb = require('./route_guide_pb.js');
 
 function serialize_routeguide_Feature(arg) {

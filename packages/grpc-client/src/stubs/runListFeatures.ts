@@ -2,7 +2,7 @@ import {
   Feature,
   Point,
   Rectangle,
-} from '../../../protos-types/dist/route_guide_pb';
+} from '../protos/route_guide_pb';
 import { COORD_FACTOR } from '../constants';
 import { client } from '../services';
 
