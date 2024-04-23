@@ -2,12 +2,8 @@ FROM    node:alpine
 
 WORKDIR /app
 
-COPY    ../packages/grpc-server/package.json .
-COPY    ../packages/grpc-server/package-lock.json .
-COPY    ../packages/grpc-server/rollup.config.mjs .
-COPY    ../packages/grpc-server/tsconfig.json .
+COPY    ../packages/grpc-server/ .
 
 RUN     npm install
-RUN     npm run build
 
-ENTRYPOINT ["node", "dist/index.js"]
+ENTRYPOINT ["/usr/local/bin/npm", "run", "dev"]

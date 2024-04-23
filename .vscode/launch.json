@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "${workspaceRoot}/packages/grpc/node_modules/.bin/ts-node",
+      "runtimeExecutable": "${workspaceRoot}/packages/grpc-server/node_modules/.bin/ts-node",
       "runtimeArgs": [
         "--transpile-only",
         // if you use esm
@@ -15,7 +15,7 @@
       ],
       "name": "Launch gRPC Server DEV",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/packages/grpc/src/index.ts",
+      "program": "${workspaceFolder}/packages/grpc-server/src/index.ts",
       "outFiles": ["${workspaceFolder}/**/*.js"],
       "env": {
         "GRPC_SERVER_PORT": "50051"

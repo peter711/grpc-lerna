@@ -4,14 +4,14 @@ services:
   grpc_server_service:
     build:
       context: .
-      dockerfile: Dockerfile-server
+      dockerfile: ./dockerfiles/Dockerfile-grpc-server
     ports: # just for debugging
       - '50051:50051'
 
   envoy_service:
     build:
       context: .
-      dockerfile: Dockerfile-envoy
+      dockerfile: ./dockerfiles/Dockerfile-envoy
     ports:
       - '8000:8000'
     volumes:
