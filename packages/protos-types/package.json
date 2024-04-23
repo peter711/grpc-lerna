@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-protos": "bash ./generate-protos-js.sh"
+    "build": "bash ./generate-protos-js.sh"
   },
   "keywords": [],
   "author": "",

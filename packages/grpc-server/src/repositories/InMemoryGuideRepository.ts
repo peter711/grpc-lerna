@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 import {
   DbFeature,
@@ -8,7 +9,9 @@ import {
 } from './IGuideRepository';
 
 export class InMemoryGuideRepository implements IGuideRepository {
-  private readonly dbPath = __dirname + '/route_guide_db.json';
+  private readonly dbPath = path.join(
+    __dirname + '/../assets/route_guide_db.json'
+  );
   private featureList: Array<DbFeature>;
   private notes: Map<string, Array<DbMessage>>;
 

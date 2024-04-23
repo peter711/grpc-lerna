@@ -1,0 +1,11 @@
+FROM    node:alpine
+
+WORKDIR /app
+
+COPY    ../packages/grpc-server/package.json .
+COPY    ../packages/grpc-server/package-lock.json .
+
+RUN     npm install
+RUN     npm build
+
+ENTRYPOINT ["node", "dist/index.js"]
