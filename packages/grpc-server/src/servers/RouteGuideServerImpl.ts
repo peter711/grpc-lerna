@@ -1,13 +1,13 @@
 import grpc from '@grpc/grpc-js';
 
-import { IRouteGuideServer } from 'protos-types/dist/route_guide_grpc_pb';
+import { IRouteGuideServer } from '../protos/route_guide_grpc_pb';
 import {
   Point,
   Feature,
   Rectangle,
   RouteSummary,
   RouteNote,
-} from 'protos-types/dist/route_guide_pb';
+} from '../protos/route_guide_pb';
 
 import { RouteGuideService } from '../services';
 
